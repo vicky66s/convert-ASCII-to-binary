@@ -1,0 +1,8 @@
+function binary_text = ascii_to_binary(text)
+    binary_result = dec2bin(text, 8); % Convert ASCII to binary with 8 bits
+    binary_text = reshape(binary_result', 1, []); % Reshape to get a single row
+end
+
+input_text = input('Enter the text to convert to binary: ', 's');
+binary_text = ascii_to_binary(input_text);
+disp(['Binary representation: ', binary_text]);
